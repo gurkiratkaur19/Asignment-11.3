@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+</head>
+<body>
+<a id="google" target="_self" href="https://www.w3resource.com/">google</a>
+<div id="attrs"></div>
+<button id="show">Show Attributes Of link</button>
+<button id="remove">Remove Result</button>
+</body>
+<script>
+    document.getElementById('show').addEventListener('click' , function(){
+        var id = document.getElementById('google').getAttribute("href");
+        console.log(id);
+        var attrs= document.getElementById('attrs');
+        attrs.innerText+="The href attribute is : ";
+        attrs.innerText+=id;
+    });
+    document.getElementById('remove').addEventListener('click' , function(){
+        document.getElementById('attrs').innerText= ""; 
+    });
+</script>
+</html>
